@@ -12,8 +12,8 @@ class TestController extends Controller
     public function index()
     {
         //
-        $articles = Article::all();
-        if($articoles)
+        $articles = Article::orderBy('created_at', 'desc')->get();
+        if($articles)
         {
             return response()->json([
                 'status'=> '200',

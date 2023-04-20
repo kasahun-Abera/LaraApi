@@ -18,9 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 /**********************************   Test Route Starts Here   *******************************************/
-Route::get('/tests', 'TestController@index');
-Route::post('/tests', 'TestController@store');
-Route::get('/tests/{test}', 'TestController@show');
+Route::get('/tests', [TestController::class, 'index']);
+Route::post('/tests', [TestController::class, 'store']);
+Route::get('/tests/{test}', [TestController::class, 'show']);
 Route::put('/tests/{test}', 'TestController@update');
 Route::delete('/tests/{test}', 'TestController@destroy');
 /**********************************   Test Route Ends Here   *******************************************/
