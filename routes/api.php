@@ -20,7 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 /**********************************   Test Route Starts Here   *******************************************/
 Route::get('/tests', [TestController::class, 'index']);
 Route::post('/tests', [TestController::class, 'store']);
-Route::get('/tests/{test}', [TestController::class, 'show']);
+Route::get('/tests/{id}', [TestController::class, 'show']);
 Route::put('/tests/{test}', [TestController::class, 'update']);
 Route::delete('/tests/{test}', [TestController::class, 'destroy']);
+// Route::apiResource('users', UserController::class);
 /**********************************   Test Route Ends Here   *******************************************/
