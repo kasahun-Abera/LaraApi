@@ -106,7 +106,7 @@ class TaxController extends Controller
         {
             return response()->json([
                 'status'=> 200,
-                'message' => 'Tax with rate '.$row->rate.' Deleted Successfully ! '
+                'message' => 'Tax with rate Deleted Successfully ! '
             ]);
         }
     }
