@@ -34,7 +34,6 @@ class TaxController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $test = new Tax();
         $test->rate = $request->rate;
         $test->start_date = $request->start_date;
