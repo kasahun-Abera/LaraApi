@@ -25,3 +25,11 @@ Route::put('/tests/{test}', [TestController::class, 'update']);
 Route::delete('/tests/{test}', [TestController::class, 'destroy']);
 // Route::apiResource('users', UserController::class);
 /**********************************   Test Route Ends Here   *******************************************/
+/**********************************   Tax Route Starts Here   *******************************************/
+Route::get('/taxes', [TaxController::class, 'index']);
+Route::post('/taxes', [TaxController::class, 'store']);
+Route::get('/taxes/{id}', [TaxController::class, 'show']);
+Route::put('/taxes/{test}', [TaxController::class, 'update']);
+Route::delete('/taxes/{test}', [TaxController::class, 'destroy']);
+// Route::apiResource('users', UserController::class);
+/**********************************   Tax Route Ends Here   *******************************************/
